@@ -112,6 +112,16 @@ extern "C" {
 #  else
 #   define LIBSSH2_API
 #  endif
+# elif defined(__OS2__)
+#  if defined(LIBSSH2_EXPORTS)
+#   ifdef LIBSSH2_LIBRARY
+#    define LIBSSH2_API
+#   else
+#    define LIBSSH2_API __declspec(dllimport)
+#   endif /* LIBSSH2_LIBRARY */
+#  else
+#   define LIBSSH2_API
+#  endif
 # else /* !_WIN32 */
 #  define LIBSSH2_API
 # endif /* _WIN32 */

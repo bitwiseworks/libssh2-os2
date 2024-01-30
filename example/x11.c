@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-#ifdef HAVE_SYS_UN_H
+#if defined(HAVE_SYS_UN_H) && !defined(__OS2__)
 
 #ifdef HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>

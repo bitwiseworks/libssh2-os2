@@ -1250,7 +1250,7 @@ size_t plain_method(char *method, size_t method_len);
 /* In Windows the default file mode is text but an application can override it.
    Therefore we specify it explicitly. https://github.com/curl/curl/pull/258
  */
-#if defined(_WIN32) || defined(MSDOS)
+#if defined(_WIN32) || defined(MSDOS) || defined(__OS2__)
 #define FOPEN_READTEXT "rt"
 #define FOPEN_WRITETEXT "wt"
 #define FOPEN_APPENDTEXT "at"
